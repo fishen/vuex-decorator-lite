@@ -1,5 +1,5 @@
 {
-  "name": "vuex-model",
+  "name": "vuex-decorator-lite",
   "version": "0.0.1",
   "description": "A vuex proxy used with class",
   "main": "index.ts",
