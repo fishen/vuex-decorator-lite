@@ -1,3 +1,4 @@
+import "reflect-metadata";
 export { VuexModel, VuexModelOptions } from './model';
-export { Store } from './store';
-export { Module, StoreOptions } from './module';
+export { Module, ModuleOptions } from './module';
+export { Newable } from './type';
