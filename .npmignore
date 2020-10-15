@@ -8,4 +8,5 @@ tsconfig.json
 webpack.config.js
 gulpfile.js
 dts/
+src/
 CHANGELOGS.md

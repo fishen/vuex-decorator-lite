@@ -35,7 +35,7 @@ export class Store {
                 const path = namespaced ? [...name, key].join('/') : key;
                 if (method === 'set') {
                     descriptor.set = v => instance.$store.commit(path, v);
-                    result.mutations![key] = (state, value) => original.call(state, value);
+                    result.mutations![key] = (s, value) => original.call(s, value);
                 }
                 if (method === 'get') {
                     result.getters![key] = original.bind(instance);
@@ -71,6 +71,7 @@ export class Store {
     }
 
     static construct(cls: Newable) {
+        console.log(cls);
         return new cls();
     }
 }

@@ -1,8 +1,4 @@
-# vuex-decorator-lite
-A vuex proxy used with class, support both javascript and typescript.
-# Demo
-```ts
-import { Module, VuexModel } from 'vuex-decorator-lite';
+import { Module, VuexModel } from '../src/index';
 import Vue from 'vue';
 import Vuex from 'vuex';
 
@@ -49,8 +45,7 @@ class StoreModel {
     }
 
     // module
-    // register modules automatically in typescript
-    // javascript environment use method(model.regishterModule) instead
+    // register modules automatically
     @Module({ reusable: true, type: Address })
     address!: Address;
     position!: Position;
@@ -117,4 +112,3 @@ export default class extends Vue {
         this.model.intro();
     }
 }
-```

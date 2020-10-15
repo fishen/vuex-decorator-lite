@@ -14,9 +14,9 @@ export class VuexModel<C extends Newable, S = any> {
     public readonly instance: InstanceType<C>;
     public readonly module: Module<S, any>
 
-    constructor(model: Newable, options?: ModuleOptions) {
-        this.instance = Store.construct(model);
-        this.module = Store.createStore(this.instance, [], false, options?.reusable);
+    constructor(type: C, options?: ModuleOptions) {
+        this.instance = Store.construct(type);
+        this.module = Store.createStore(this.instance as any, [], false, options?.reusable);
     }
     install(vue: { prototype: any }, options?: { name: string }) {
         const { name } = Object.assign({ name: 'store' }, options);
